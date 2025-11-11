@@ -1,0 +1,21 @@
+fastapi==0.112.2
+uvicorn[standard]==0.30.6
+python-multipart==0.0.12
+pydantic==2.9.1
+ pydantic-settings
+SQLAlchemy==2.0.35
+asyncpg==0.29.0
+passlib[bcrypt]==1.7.4
+PyJWT==2.9.0
+starlette==0.38.4
+alembic==1.13.2
+psycopg2-binary==2.9.9
+# Additional dependencies from code imports
+os-sys
+python-dotenv
+typing-extensions
+uuid
+email-validator
+
+
+

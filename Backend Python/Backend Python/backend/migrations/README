@@ -1,0 +1,20 @@
+Usage
+
+- With Alembic (preferred):
+  1) Ensure DATABASE_URL is set (or in alembic.ini), e.g.
+     postgresql://postgres:password@localhost:5432/alumni_platform
+  2) From backend/: run
+     alembic upgrade head
+
+- With Docker Compose:
+  1) Start services: docker compose up -d db
+  2) Set DATABASE_URL to point to db service:
+     postgresql://postgres:password@db:5432/alumni_platform
+  3) Run migrations inside backend container or host with env set:
+     alembic upgrade head
+
+- Apply raw SQL directly (psql):
+  psql "$DATABASE_URL" -f migrations/sql/schema.sql
+
+
+
